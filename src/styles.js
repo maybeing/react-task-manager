@@ -19,7 +19,8 @@ export default StyleSheet.create({
         backgroundColor: 'e5e5e5',
         width: '100%',
         marginTop: 20,
-        alignItems: 'center'
+        alignItems: 'center',
+        textAlign: 'center'
     },
     scrollViewContent: {
         alignItems: 'center',

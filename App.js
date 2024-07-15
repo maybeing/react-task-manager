@@ -5,6 +5,7 @@ import ColorBlock from './src/components/feed/ColorBlock';
 import Task from './src/components/feed/Task';
 import TaskList from './src/components/feed/TaskList';
 import { useState } from 'react';
+import { Icon } from 'react-native-elements'
 
 
 const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
@@ -23,21 +24,21 @@ export default function App() {
           Tarefas
         </Text>
         <View style={styles.feedImages}>
-          <ScrollView contentContainerStyle={styles.scrollViewContent}>
+          {/* <ScrollView contentContainerStyle={styles.scrollViewContent}>*/}
             <TaskList taskList={taskList}/>
      {/* {colors.map((color, index) => (
             <ColorBlock key={index} color={color} />
           ))}
 */}
-          </ScrollView>
+          {/*</ScrollView>*/}
         </View>
         <StatusBar style={{ color:'green'}} />
       </View>
           <Task onAddTask={handleAddTask} />
       <View style={{alignItems: 'flex-end', justifyContent:'space-around', flexDirection: 'row', gap: 40, marginBottom: 30}}>
-        <Text> Explorar </Text>
-        <Text> Tarefas </Text>
-        <Text> Perfil </Text>
+      <Icon name="explore" type="material" />
+      <Icon name="home" type="material" color='pink' />
+      <Icon name="person" type="material" />
       </View>
   </View>
   );

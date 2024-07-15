@@ -12,10 +12,16 @@ const Task = ({ onAddTask }) => {
             value={task}
         >
         </TextInput>
-        <Button
+        <Button 
+            color = 'pink'
             title= 'Adicionar Tarefa'
-            onPress={ () => {onAddTask(task); setTask('')}}
-          //  disabled = { pressedCount > 2 }
+            disabled = { !task }
+            onPress={ () => {
+                if (task) {
+                    onAddTask(task); setTask('')
+                }
+            }   
+            }
         >
         </Button>
     </View>

@@ -7,9 +7,7 @@ const TaskList = ({ taskList }) => {
         data={taskList}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <View>
             <Text style={taskStyle}>{item}</Text>
-          </View>
         )}
       />
     </View>
@@ -18,10 +16,13 @@ const TaskList = ({ taskList }) => {
 
 const taskStyle = StyleSheet.create({
     padding: 20,
-    color: 'pink',
-    fontWeight: 800,
+    color: 'black',
+    fontWeight: 600,
     backgroundColor: '#f5f5f5',
-    margin: 20
+    margin: 20,
+    textAlign: 'center',
+    borderRadius: 8,
+    minWidth: 300
 })
 
 export default TaskList;
